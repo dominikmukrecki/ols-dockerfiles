@@ -14,7 +14,7 @@ The system will regulary build both OpenLiteSpeed Edge and Latest stable version
 
 |Component|Version|
 | :-------------: | :-------------: |
-|Linux|Ubuntu 18.04|
+|Linux|bitnami/minideb:latest|
 |OpenLiteSpeed|[Edge stable version](https://openlitespeed.org/release-log/version-1-6-x)|
 |OpenLiteSpeed|[Latest stable version](https://openlitespeed.org/release-log/version-1-5-x)|
 |PHP|[Latest stable version](http://rpms.litespeedtech.com/debian/)|
