@@ -3,8 +3,9 @@ FROM bitnami/minideb:latest
 ARG OLS_VERSION
 ARG PHP_VERSION
 
-
 RUN apt-get update && apt-get install wget curl cron tzdata -y
+
+RUN wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debian_repo.sh | bash
 
 RUN wget https://openlitespeed.org/preuse/openlitespeed-$OLS_VERSION.tgz && \
     tar xzf openlitespeed-$OLS_VERSION.tgz && cd openlitespeed && ./install.sh && \
