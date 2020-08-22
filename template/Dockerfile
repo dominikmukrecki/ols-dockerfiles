@@ -11,7 +11,7 @@ RUN wget https://openlitespeed.org/preuse/openlitespeed-$OLS_VERSION.tgz && \
     tar xzf openlitespeed-$OLS_VERSION.tgz && cd openlitespeed && ./install.sh && \
     echo 'cloud-docker' > /usr/local/lsws/PLAT && rm -rf /openlitespeed
 
-RUN apt-get install mysql-client $PHP_VERSION $PHP_VERSION-common $PHP_VERSION-mysql $PHP_VERSION-opcache \
+RUN apt-get install mariadb-client $PHP_VERSION $PHP_VERSION-common $PHP_VERSION-mysql $PHP_VERSION-opcache \
     $PHP_VERSION-curl $PHP_VERSION-json $PHP_VERSION-imagick $PHP_VERSION-redis $PHP_VERSION-intl -y
 
 RUN wget -O /usr/local/lsws/admin/misc/lsup.sh \
